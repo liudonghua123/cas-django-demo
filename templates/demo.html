@@ -11,8 +11,19 @@
 </head>
 <body>
 <div class="ui container">
-    <div class="ui primary right floated button" onclick="loginIndex()"><i class="user icon"></i>登录</div>
+   {% if user != "" %}}
+    <div class="ui dropdown toggle left floated">
+        <div class="text">
+            <i class="user icon"></i>
+            User:<span></span>{{ user}}
+        </div>
+    </div>
     <div class="ui primary right floated button" onclick="logoutIndex()"><i class="user icon"></i>退出</div>
+    {% else %}
+    <div class="ui primary right floated button" onclick="loginIndex()"><i class="user icon"></i>登录</div>
+    {% endif %}
+    <p>Wrlcome to home page!</p>
+
 </div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>

@@ -7,13 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <script src="/static/js/demo.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
     <title>Home Page</title>
 </head>
 <body>
 <div class="ui container">
-    <p>Wrlcome to home page!</p>
+   {% if user_dict.email != "" %}
+    <div class="ui simple dropdown item left floated">
+        <div class="text">
+            <i class="user icon"></i>
+            User
+        </div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item">{{ user_dict.email}}</a>
+            <a class="item">{{ user_dict.role}}</a>
+        </div>
+    </div>
+    <div class="ui primary right floated button" onclick="logoutIndex()"><i class="user icon"></i>退出</div>
+    {% else %}
+    <div class="ui primary right floated button" onclick="loginIndex()"><i class="user icon"></i>登录</div>
+    {% endif %}
+    <p>Wrlcome to home page!     {{ user_dict.email}}</p>
+
 </div>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+
 </body>
 </html>

@@ -4,6 +4,6 @@ import demo.views as demo_views
 
 urlpatterns = [
     url(r'^$',demo_views.home, name='demo_home_page'),
-    url(r'^demo/',include('demo.urls')),
+    url(r'^accounts/',include('demo.urls')),
     url(r'^admin/', admin.site.urls),
 ]
