@@ -58,7 +58,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # 也就是LMS的地址
-CAS_SERVER_URL = 'http://127.0.0.1:8000'
+CAS_SERVER_URL = 'http://ids.ynu.edu.cn/authserver/'
 CAS_VERSION = '3'
 
 
