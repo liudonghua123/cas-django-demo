@@ -5,7 +5,7 @@
 # 具体解决方案
 ## 安装python_cas_ng
 ```bash
-pip install  django-mama--ng
+pip install django_cas_ng
 ```
 ## 修改项目的settings.py文件
 ```python
